@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories Reader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Stories Reader</h1>
+            <div id="auth-section">
+                <button id="login-btn" style="display: none;">Login with GitHub</button>
+                <div id="user-info" style="display: none;">
+                    <span id="username"></span>
+                    <button id="logout-btn">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="login-message" class="message">
+                <p>Please log in to view your stories</p>
+            </div>
+
+            <div id="stories-container" style="display: none;">
+                <div class="search-section">
+                    <input type="text" id="search-input" placeholder="Search stories..." />
+                    <button id="search-btn">Search</button>
+                </div>
+
+                <div id="stories-list">
+                    <h2>Your Stories</h2>
+                    <div id="stories-grid"></div>
+                </div>
+
+                <div id="story-viewer" style="display: none;">
+                    <button id="back-btn">← Back to Stories</button>
+                    <div id="story-content"></div>
+                </div>
+            </div>
+
+            <div id="error-message" class="message error" style="display: none;"></div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
